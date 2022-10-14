@@ -1,0 +1,26 @@
+Source: node-registry-auth-token
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends:
+ debhelper (>= 9)
+ , dh-buildinfo
+ , nodejs
+Standards-Version: 4.1.0
+Homepage: https://github.com/rexxars/registry-auth-token#readme
+Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-registry-auth-token.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-registry-auth-token.git
+
+Package: node-registry-auth-token
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-safe-buffer (>= 5.0.1)
+ , node-rc (>= 1.1.6)
+Description: Get the auth token set for an npm registry (if any)
+ Get the auth token set for an npm registry from `.npmrc`. Also allows fetching
+ the configured registry URL for a given npm scope.
+ .
+ Node.js is an event-based server-side JavaScript engine.
