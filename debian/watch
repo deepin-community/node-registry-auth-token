@@ -1,5 +1,15 @@
-version=3
+version=4
 opts=\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-registry-auth-token-$1.tar.gz/ \
- https://github.com/rexxars/registry-auth-token/tags .*/archive/v?([\d\.]+).tar.gz
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-registry-auth-token-$1/ \
+ https://github.com/rexxars/registry-auth-token/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=pnpm-npm-conf,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-pnpm-npm-conf-$1/" \
+ https://registry.npmjs.org/@pnpm/npm-conf https://registry.npmjs.org/@pnpm/npm-conf/-/npm-conf-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=pnpm-network-ca-file,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-pnpm-network-ca-file-$1/" \
+ https://registry.npmjs.org/@pnpm/network.ca-file https://registry.npmjs.org/@pnpm/network.ca-file/-/network.ca-file-([\d\.]+)@ARCHIVE_EXT@ checksum

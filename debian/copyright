@@ -1,7 +1,10 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: registry-auth-token
 Upstream-Contact: https://github.com/rexxars/registry-auth-token/issues
 Source: https://github.com/rexxars/registry-auth-token#readme
+ https://registry.npmjs.org/@types/registry-auth-token
+ https://registry.npmjs.org/@pnpm/npm-conf
+ https://registry.npmjs.org/@pnpm/network.ca-file
 
 Files: *
 Copyright: 2016 Espen Hovlandsdal <espen@hovlandsdal.com>
@@ -9,6 +12,14 @@ License: Expat
 
 Files: debian/*
 Copyright: 2017 Pirate Praveen <praveen@debian.org>
+License: Expat
+
+Files: pnpm-*/*
+Copyright: Kevin Mårtensson <kevinmartensson@gmail.com>
+License: Expat
+
+Files: debian/tests/test_modules/*
+Copyright: Sindre Sorhus <sindresorhus@gmail.com>
 License: Expat
 
 License: Expat
@@ -31,4 +42,3 @@ License: Expat
  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-
