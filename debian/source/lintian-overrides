@@ -1,0 +1,5 @@
+# Match pnpm-*/*
+add-component-copyright pnpm-network-ca-file *
+add-component-copyright pnpm-npm-conf *
+# Source-map files
+very-long-line-length-in-source-file *.map*
